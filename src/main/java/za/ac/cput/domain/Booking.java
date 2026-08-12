@@ -1,6 +1,6 @@
-package com.fundishop.domain;
+package za.ac.cput.domain;
 
-import com.fundishop.domain.enums.BookingStatus;
+import za.ac.cput.domain.enums.BookingStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -27,7 +27,7 @@ public class Booking {
 
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
-    private com.fundishop.domain.User customer;
+    private za.ac.cput.domain.User customer;
 
     @ManyToOne
     @JoinColumn(name = "fundi_profile_id", nullable = false)

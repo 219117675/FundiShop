@@ -1,7 +1,7 @@
-package com.fundishop.domain;
+package za.ac.cput.domain;
 
-import com.fundishop.domain.enums.OrderStatus;
-import com.fundishop.domain.enums.PaymentMethod;
+import za.ac.cput.domain.enums.OrderStatus;
+import za.ac.cput.domain.enums.PaymentMethod;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -28,7 +28,7 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
-    private com.fundishop.domain.User customer;
+    private za.ac.cput.domain.User customer;
 
     @Builder.Default
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)

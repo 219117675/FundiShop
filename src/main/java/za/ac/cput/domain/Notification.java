@@ -1,4 +1,4 @@
-package com.fundishop.domain;
+package za.ac.cput.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -23,7 +23,7 @@ public class Notification {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private com.fundishop.domain.User user;
+    private za.ac.cput.domain.User user;
 
     @Column(nullable = false, length = 500)
     private String message;

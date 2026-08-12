@@ -1,4 +1,4 @@
-package com.fundishop.domain;
+package za.ac.cput.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,7 +20,7 @@ public class Address {
 
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false, unique = true)
-    private com.fundishop.domain.User user;
+    private za.ac.cput.domain.User user;
 
     private String line1;
     private String suburb;

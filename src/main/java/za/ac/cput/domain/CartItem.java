@@ -1,4 +1,4 @@
-package com.fundishop.domain;
+package za.ac.cput.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -22,7 +22,7 @@ public class CartItem {
 
     @ManyToOne
     @JoinColumn(name = "cart_id", nullable = false)
-    private com.fundishop.domain.Cart cart;
+    private za.ac.cput.domain.Cart cart;
 
     @ManyToOne
     @JoinColumn(name = "listing_id")
@@ -30,7 +30,7 @@ public class CartItem {
 
     @ManyToOne
     @JoinColumn(name = "booking_id")
-    private com.fundishop.domain.Booking booking;
+    private za.ac.cput.domain.Booking booking;
 
     @Builder.Default
     private Integer quantity = 1;

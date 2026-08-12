@@ -1,6 +1,6 @@
-package com.fundishop.domain;
+package za.ac.cput.domain;
 
-import com.fundishop.domain.enums.Role;
+import za.ac.cput.domain.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;

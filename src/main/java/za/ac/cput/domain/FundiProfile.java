@@ -1,7 +1,7 @@
-package com.fundishop.domain;
+package za.ac.cput.domain;
 
-import com.fundishop.domain.enums.TradeCategory;
-import com.fundishop.domain.enums.VerificationStatus;
+import za.ac.cput.domain.enums.TradeCategory;
+import za.ac.cput.domain.enums.VerificationStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -26,7 +26,7 @@ public class FundiProfile {
 
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false, unique = true)
-    private com.fundishop.domain.User user;
+    private za.ac.cput.domain.User user;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

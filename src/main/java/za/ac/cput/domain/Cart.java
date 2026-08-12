@@ -1,4 +1,4 @@
-package com.fundishop.domain;
+package za.ac.cput.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -25,7 +25,7 @@ public class Cart {
 
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false, unique = true)
-    private com.fundishop.domain.User user;
+    private za.ac.cput.domain.User user;
 
     @Builder.Default
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
